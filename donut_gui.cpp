@@ -49,7 +49,7 @@ int main(void) {
     
     int line_index = 0;
     sf::Font default_font;
-    default_font.loadFromFile("Consolas.ttf");
+    default_font.loadFromFile("font/Consolas.ttf");
     sf::RenderWindow window(sf::VideoMode(width , height) , "flying donut");
     sf::Clock clock;
     clock.restart();
@@ -74,10 +74,10 @@ int main(void) {
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) ax -= add_a;
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) ax += add_a;
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::F)) wy -= add_w;
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::H)) wy += add_w;
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::T)) wx -= add_w;
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::G)) wx += add_w;
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)) wy -= add_w;
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)) wy += add_w;
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)) wx -= add_w;
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)) wx += add_w;
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::F1)) {
             change_w_a(ax , ay , wx , wy);
